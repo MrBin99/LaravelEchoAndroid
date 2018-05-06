@@ -1,1 +1,3 @@
-LaravelEchoAndroid
+# LaravelEchoAndroid
+
+Laravel Echo Android client.
