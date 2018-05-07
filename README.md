@@ -5,7 +5,7 @@
 Laravel Echo Android client.
 
 
-###Installation
+##Installation
 In your ``build.gradle`` paste the code bellow :
 ```gradle
 allprojects {
