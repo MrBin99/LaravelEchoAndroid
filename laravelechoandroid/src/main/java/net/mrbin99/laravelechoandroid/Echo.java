@@ -4,7 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid;
 
-import android.support.annotation.Nullable;
 import net.mrbin99.laravelechoandroid.channel.SocketIOChannel;
 import net.mrbin99.laravelechoandroid.channel.SocketIOPresenceChannel;
 import net.mrbin99.laravelechoandroid.channel.SocketIOPrivateChannel;
@@ -42,7 +41,7 @@ public final class Echo {
      * @param success success callback
      * @param error   error callback
      */
-    public void connect(@Nullable EchoCallback success, @Nullable EchoCallback error) {
+    public void connect(EchoCallback success, EchoCallback error) {
         connector.connect(success, error);
     }
 

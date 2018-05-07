@@ -4,8 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid.util;
 
-import android.support.annotation.NonNull;
-
 /**
  * Event name formatter.
  */
@@ -54,7 +52,7 @@ public final class EventFormatter {
      *
      * @param namespace namespace of events
      */
-    public void setNamespace(@NonNull String namespace) {
+    public void setNamespace(String namespace) {
         this.namespace = namespace;
     }
 }

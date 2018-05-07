@@ -4,7 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid.connector;
 
-import android.support.annotation.Nullable;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import net.mrbin99.laravelechoandroid.EchoCallback;
@@ -46,7 +45,7 @@ public class SocketIOConnector extends AbstractConnector {
     }
 
     @Override
-    public void connect(@Nullable EchoCallback success, @Nullable EchoCallback error) {
+    public void connect(EchoCallback success, EchoCallback error) {
         try {
             socket = IO.socket(this.options.host);
             socket.connect();

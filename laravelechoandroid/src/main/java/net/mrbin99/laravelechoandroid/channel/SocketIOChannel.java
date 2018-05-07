@@ -4,8 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid.channel;
 
-import android.support.annotation.Nullable;
-import android.util.ArrayMap;
 import io.socket.client.Socket;
 import net.mrbin99.laravelechoandroid.EchoCallback;
 import net.mrbin99.laravelechoandroid.EchoException;
@@ -14,6 +12,7 @@ import net.mrbin99.laravelechoandroid.util.EventFormatter;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -59,7 +58,7 @@ public class SocketIOChannel extends AbstractChannel {
         this.name = name;
         this.options = options;
         this.formatter = new EventFormatter(options.eventNamespace);
-        this.eventsCallbacks = new ArrayMap<>();
+        this.eventsCallbacks = new HashMap<>();
 
         try {
             this.subscribe(null);
@@ -81,7 +80,7 @@ public class SocketIOChannel extends AbstractChannel {
      * @param callback callback with response from the server
      * @throws EchoException if error when subscribing to the channel.
      */
-    public void subscribe(@Nullable EchoCallback callback) throws EchoException {
+    public void subscribe(EchoCallback callback) throws EchoException {
         JSONObject object = new JSONObject();
         try {
             object.put("channel", name);
@@ -104,7 +103,7 @@ public class SocketIOChannel extends AbstractChannel {
      * @param callback callback with response from the server
      * @throws EchoException if error when unsubscribing to the channel.
      */
-    public void unsubscribe(@Nullable EchoCallback callback) throws EchoException {
+    public void unsubscribe(EchoCallback callback) throws EchoException {
         unbind();
 
         JSONObject object = new JSONObject();

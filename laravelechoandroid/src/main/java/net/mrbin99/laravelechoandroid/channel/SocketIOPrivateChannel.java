@@ -4,7 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid.channel;
 
-import android.support.annotation.Nullable;
 import io.socket.client.Socket;
 import net.mrbin99.laravelechoandroid.EchoCallback;
 import net.mrbin99.laravelechoandroid.EchoException;
@@ -36,7 +35,7 @@ public class SocketIOPrivateChannel extends SocketIOChannel {
      * @return this channel
      * @throws EchoException if error creating the whisper
      */
-    public SocketIOPrivateChannel whisper(String event, @Nullable JSONObject data, @Nullable EchoCallback callback)
+    public SocketIOPrivateChannel whisper(String event, JSONObject data, EchoCallback callback)
             throws EchoException {
 
         JSONObject object = new JSONObject();

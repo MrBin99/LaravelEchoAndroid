@@ -4,9 +4,9 @@
  */
 package net.mrbin99.laravelechoandroid;
 
-import android.util.ArrayMap;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -38,7 +38,7 @@ public final class EchoOptions {
      * Create default object of options.
      */
     public EchoOptions() {
-        headers = new ArrayMap<>();
+        headers = new HashMap<>();
         host = "http://localhost:6001";
         authEndpoint = "/broadcasting/auth";
         eventNamespace = "App.Events";

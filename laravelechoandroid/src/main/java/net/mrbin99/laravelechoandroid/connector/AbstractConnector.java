@@ -4,7 +4,6 @@
  */
 package net.mrbin99.laravelechoandroid.connector;
 
-import android.support.annotation.Nullable;
 import net.mrbin99.laravelechoandroid.EchoCallback;
 import net.mrbin99.laravelechoandroid.EchoOptions;
 import net.mrbin99.laravelechoandroid.channel.AbstractChannel;
@@ -34,7 +33,7 @@ public abstract class AbstractConnector {
      * @param success callback when success
      * @param error   callback when error
      */
-    public abstract void connect(@Nullable EchoCallback success, @Nullable EchoCallback error);
+    public abstract void connect(EchoCallback success, EchoCallback error);
 
     /**
      * Get a channel instance by name.
