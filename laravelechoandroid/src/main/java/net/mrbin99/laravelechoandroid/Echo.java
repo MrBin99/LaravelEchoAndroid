@@ -46,6 +46,26 @@ public final class Echo {
     }
 
     /**
+     * Listen for general event on the socket.
+     *
+     * @param eventName event name
+     * @param callback  callback
+     * @see io.socket.client.Socket list of event types to listen to
+     */
+    public void on(String eventName, EchoCallback callback) {
+        connector.on(eventName, callback);
+    }
+
+    /**
+     * Remove all listeners for a general event.
+     *
+     * @param eventName event name
+     */
+    public void off(String eventName) {
+        connector.off(eventName);
+    }
+
+    /**
      * Listen for an event on a channel instance.
      *
      * @param channel  channel name

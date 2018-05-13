@@ -169,6 +169,27 @@ echo.leave("channel-name");
 
 For presence channel, this action make Laravel Echo Server send a "leaving" event to all other clients connected to this channel.
 
+### Listening for general Socket.io events
+
+You can also listen for generic Socket.io events :
+
+```java
+echo.on(Socket.EVENT_ERROR, new EchoCallback() {
+    @Override
+    public void call(Object... args) {
+        // Callback
+    }
+});
+```
+
+You can check all available predefined events on the `io.socket.client.Socket` class or on [https://stackoverflow.com/questions/24224287/list-of-socket-io-events](https://stackoverflow.com/questions/24224287/list-of-socket-io-events).
+
+If you want to delete the callback :
+
+```java
+echo.off(Socket.EVENT_ERROR);
+```
+
 ### More information
 
 For more information, please visit the [Laravel Broadcasting documentation](https://laravel.com/docs/5.6/broadcasting).

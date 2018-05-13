@@ -15,17 +15,20 @@ import java.util.Map;
 public final class EchoOptions {
 
     /**
-     * Host of the Echo server.
+     * Host of the Echo server.<br>
+     * <b>Default : </b>http://localhost:6001
      */
     public String host;
 
     /**
-     * Host endpoint.
+     * Host endpoint.<br>
+     * <b>Default : </b>/broadcasting/auth
      */
     public String authEndpoint;
 
     /**
-     * Event namespace.
+     * Event namespace.<br>
+     * <b>Default : </b>App.Events
      */
     public String eventNamespace;
 
