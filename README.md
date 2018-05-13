@@ -18,7 +18,7 @@ allprojects {
 And in ``dependencies`` :
 `````gradle
 dependencies {
-    compile 'com.github.MrBin99:LaravelEchoAndroid:0.1pre'
+    compile 'com.github.MrBin99:LaravelEchoAndroid:1.0'
 }
 `````
 
