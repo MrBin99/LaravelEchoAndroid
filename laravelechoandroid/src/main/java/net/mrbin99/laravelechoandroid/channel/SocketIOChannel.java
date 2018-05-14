@@ -65,12 +65,7 @@ public class SocketIOChannel extends AbstractChannel {
         } catch (EchoException e) {
             e.printStackTrace();
         }
-
-        try {
-            subscribe(null);
-        } catch (EchoException e) {
-            e.printStackTrace();
-        }
+        
         configureReconnector();
     }
 
