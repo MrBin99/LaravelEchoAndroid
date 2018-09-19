@@ -134,7 +134,7 @@ public class SocketIOChannel extends AbstractChannel {
         EchoCallback listener = new EchoCallback() {
             @Override
             public void call(Object... objects) {
-                if (objects[0] instanceof String) {
+                if (objects.length > 0 && objects[0] instanceof String) {
                     String channel = (String) objects[0];
 
                     if (channel.equals(name)) {
