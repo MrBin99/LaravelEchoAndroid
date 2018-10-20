@@ -11,10 +11,7 @@ import net.mrbin99.laravelechoandroid.EchoOptions;
 import net.mrbin99.laravelechoandroid.util.EventFormatter;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * This class represents a Socket.io channel.
@@ -65,7 +62,7 @@ public class SocketIOChannel extends AbstractChannel {
         } catch (EchoException e) {
             e.printStackTrace();
         }
-        
+
         configureReconnector();
     }
 
@@ -185,12 +182,12 @@ public class SocketIOChannel extends AbstractChannel {
      * Unbind the channel's socket from all stored event callbacks.
      */
     public void unbind() {
-        for (String event : eventsCallbacks.keySet()) {
-            socket.off(event);
-            eventsCallbacks.remove(event);
-        }
+        Iterator<String> iterator = eventsCallbacks.keySet().iterator();
 
-        eventsCallbacks.clear();
+        while (iterator.hasNext()) {
+            socket.off(iterator.next());
+            iterator.remove();
+        }
     }
 
     /**
