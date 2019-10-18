@@ -129,4 +129,15 @@ public final class Echo {
     public void disconnect() {
         connector.disconnect();
     }
+	
+    /**
+     * Get a socket id
+	 * To use broadcast-> toOthers in laravel
+	 * You must add the X-Socket-ID: {socketId} to the header.
+     */
+    public void socketId() {
+        if(connector.getSocket() == null) return null
+		return connector.getSocket().id();
+    }
+
 }
