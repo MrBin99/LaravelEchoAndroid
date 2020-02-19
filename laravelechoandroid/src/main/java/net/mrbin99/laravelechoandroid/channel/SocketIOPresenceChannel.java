@@ -26,14 +26,14 @@ public class SocketIOPresenceChannel extends SocketIOPrivateChannel implements I
 
     @Override
     public IPresenceChannel here(EchoCallback callback) {
-        on("presence:joining", callback);
+        on("presence:subscribed", callback);
 
         return this;
     }
 
     @Override
     public IPresenceChannel joining(EchoCallback callback) {
-        on("presence:subscribed", callback);
+        on("presence:joining", callback);
 
         return this;
     }
