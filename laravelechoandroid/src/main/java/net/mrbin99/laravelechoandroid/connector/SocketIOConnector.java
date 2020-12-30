@@ -144,7 +144,7 @@ public class SocketIOConnector extends AbstractConnector {
 
     @Override
     public boolean isConnected() {
-        return socket.connected();
+        return socket != null && socket.connected();
     }
 
     @Override
