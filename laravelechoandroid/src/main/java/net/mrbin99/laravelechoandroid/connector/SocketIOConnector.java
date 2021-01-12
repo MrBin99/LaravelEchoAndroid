@@ -166,4 +166,8 @@ public class SocketIOConnector extends AbstractConnector {
         channels.clear();
         socket.disconnect();
     }
+	
+	public Socket getSocket() {
+		return socket;
+	}
 }
