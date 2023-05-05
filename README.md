@@ -1,5 +1,7 @@
 [![](https://jitpack.io/v/MrBin99/LaravelEchoAndroid.svg)](https://jitpack.io/#MrBin99/LaravelEchoAndroid)
 
+# This project is not maintained anymore
+
 # LaravelEchoAndroid
 
 Laravel Echo Android client.
